@@ -12,11 +12,13 @@
    (:body
     (http/get (str "http://www.4clojure.com/api/problem/" n)))))
 
+(defn strip-cr [somestr]
+  (string/replace somestr "\r" ""))
+
 (defn get-tests [problem-data]
   (let [tests (problem-data "tests")]
-    (string/replace (string/join "\n" tests)
-                    "\r" "")))
-
+    (strip-cr (string/join "\n" tests))
+                 
 (defn wrap-in-are [tests]
   (str "(defn -main []\n  (are [x] x\n"
        tests
@@ -41,7 +43,7 @@
                             (problem-data "title")
                             " - "
                             (problem-data "difficulty")))
-                  (comment (problem-data "description"))
+                  (comment (strip-cr (problem-data "description")))
                   (comment (display-vector "tags"
                                            (problem-data "tags")))
                   
