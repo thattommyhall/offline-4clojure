@@ -22,7 +22,7 @@
 (defn wrap-in-are [tests]
   (str "(defn -main []\n  (are [x] x\n"
        tests
-       "))"))
+       "\n))"))
 
 (defn display-vector [title entries]
   (str title " - "
