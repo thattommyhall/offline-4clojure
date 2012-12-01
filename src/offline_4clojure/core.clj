@@ -17,7 +17,7 @@
 
 (defn get-tests [problem-data]
   (let [tests (problem-data "tests")]
-    (strip-cr (string/join "\n" tests))
+    (strip-cr (string/join "\n" tests))))
                  
 (defn wrap-in-are [tests]
   (str "(defn -main []\n  (are [x] x\n"
@@ -34,7 +34,8 @@
 (def template-soln "(def __\n;; your solution here\n)")
 
 (defn comment [somestr]
-  (str "; " somestr))
+  (str ";"
+       (string/replace somestr #"\n" "\n;")))
 
 (defn generate-file [n]
   (let [problem-data (fetch-problem-data n)]
@@ -60,7 +61,8 @@
 (defn write-file [n]
   (println "writing" n)
   (spit (str "src/offline_4clojure/p" n ".clj")
-        (generate-file n)))
+        (generate-file 141)
+        ))
 
 (defn -main
   [& args]
