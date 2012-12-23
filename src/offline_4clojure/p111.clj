@@ -1,30 +1,25 @@
-;Tricky card games - Medium
-;<p>
-;  In <a href="http://en.wikipedia.org/wiki/Trick-taking_game">trick-taking
-;  card games</a> such as bridge, spades, or hearts, cards are played
-;  in groups known as "tricks" - each player plays a single card, in
-;  order; the first player is said to "lead" to the trick. After all
-;  players have played, one card is said to have "won" the trick. How
-;  the winner is determined will vary by game, but generally the winner
-;  is the highest card played <i>in the suit that was
-;  led</i>. Sometimes (again varying by game), a particular suit will
-;  be designated "trump", meaning that its cards are more powerful than
-;  any others: if there is a trump suit, and any trumps are played,
-;  then the highest trump wins regardless of what was led.
-;</p>
-;<p>
-;  Your goal is to devise a function that can determine which of a
-;  number of cards has won a trick. You should accept a trump suit, and
-;  return a function <code>winner</code>. Winner will be called on a
-;  sequence of cards, and should return the one which wins the
-;  trick. Cards will be represented in the format returned
-;  by <a href="/problem/128/">Problem 128, Recognize Playing Cards</a>:
-;  a hash-map of <code>:suit</code> and a
-;  numeric <code>:rank</code>. Cards with a larger rank are stronger.
-;</p>
-;tags - game:cards
-;restricted - 
-(ns offline-4clojure.p141
+; Crossword puzzle - Hard
+; Write a function that takes a string and a partially-filled crossword puzzle board, and determines if the input string can be legally placed onto the board.
+</br></br>
+
+The crossword puzzle board consists of a collection of partially-filled rows.  Empty spaces are denoted with an underscore (_), unusable spaces are denoted with a hash symbol (#), and pre-filled spaces have a character in place; the whitespace characters are for legibility and should be ignored.
+</br></br>
+For a word to be legally placed on the board:
+</br>
+- It may use empty spaces (underscores)
+</br>
+- It may use but must not conflict with any pre-filled characters.
+</br>
+- It must not use any unusable spaces (hashes).
+</br>
+- There must be no empty spaces (underscores) or extra characters before or after the word (the word may be bound by unusable spaces though).
+</br>
+- Characters are not case-sensitive. 
+</br>
+- Words may be placed vertically (proceeding top-down only), or horizontally (proceeding left-right only).
+; tags - game
+; restricted - 
+(ns offline-4clojure.p111
   (:use clojure.test))
 
 (def __
@@ -33,14 +28,17 @@
 
 (defn -main []
   (are [x] x
-(let [notrump (__ nil)]
-  (and (= {:suit :club :rank 9}  (notrump [{:suit :club :rank 4}
-                                           {:suit :club :rank 9}]))
-       (= {:suit :spade :rank 2} (notrump [{:suit :spade :rank 2}
-                                           {:suit :club :rank 10}]))))
-(= {:suit :club :rank 10} ((__ :club) [{:suit :spade :rank 2}
-                                       {:suit :club :rank 10}]))
-(= {:suit :heart :rank 8}
-   ((__ :heart) [{:suit :heart :rank 6} {:suit :heart :rank 8}
-                 {:suit :diamond :rank 10} {:suit :heart :rank 4}]))
+(= true  (__ "the" ["_ # _ _ e"]))
+(= false (__ "the" ["c _ _ _"
+                    "d _ # e"
+                    "r y _ _"]))
+(= true  (__ "joy" ["c _ _ _"
+                    "d _ # e"
+                    "r y _ _"]))
+(= false (__ "joy" ["c o n j"
+                    "_ _ y _"
+                    "r _ _ #"]))
+(= true  (__ "clojure" ["_ _ _ # j o y"
+                        "_ _ o _ _ _ _"
+                        "_ _ f _ # _ _"]))
 ))

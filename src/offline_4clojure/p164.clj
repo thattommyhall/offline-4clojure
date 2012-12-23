@@ -1,30 +1,20 @@
-;Tricky card games - Medium
-;<p>
-;  In <a href="http://en.wikipedia.org/wiki/Trick-taking_game">trick-taking
-;  card games</a> such as bridge, spades, or hearts, cards are played
-;  in groups known as "tricks" - each player plays a single card, in
-;  order; the first player is said to "lead" to the trick. After all
-;  players have played, one card is said to have "won" the trick. How
-;  the winner is determined will vary by game, but generally the winner
-;  is the highest card played <i>in the suit that was
-;  led</i>. Sometimes (again varying by game), a particular suit will
-;  be designated "trump", meaning that its cards are more powerful than
-;  any others: if there is a trump suit, and any trumps are played,
-;  then the highest trump wins regardless of what was led.
-;</p>
-;<p>
-;  Your goal is to devise a function that can determine which of a
-;  number of cards has won a trick. You should accept a trump suit, and
-;  return a function <code>winner</code>. Winner will be called on a
-;  sequence of cards, and should return the one which wins the
-;  trick. Cards will be represented in the format returned
-;  by <a href="/problem/128/">Problem 128, Recognize Playing Cards</a>:
-;  a hash-map of <code>:suit</code> and a
-;  numeric <code>:rank</code>. Cards with a larger rank are stronger.
-;</p>
-;tags - game:cards
-;restricted - 
-(ns offline-4clojure.p141
+; Language of a DFA - Hard
+; A <a href="http://en.wikipedia.org/wiki/Deterministic_finite_automaton">deterministic finite automaton (DFA)</a> is an abstract machine that recognizes a <a href=" http://en.wikipedia.org/wiki/Regular_language">regular language</a>. Usually a DFA is defined by a 5-tuple, but instead we'll use a map with 5 keys:
+
+<ul>
+<li><var>:states</var> is the set of states for the DFA.</li>
+<li><var>:alphabet</var> is the set of symbols included in the language recognized by the DFA. </li>
+<li><var>:start</var> is the start state of the DFA. </li>
+<li><var>:accepts</var> is the set of accept states in the DFA. </li>
+<li><var>:transitions</var> is the transition function for the DFA, mapping <var>:states</var> &#x2a2f <var>:alphabet</var> onto <var>:states</var>.</li>
+</ul>
+
+Write a function that takes as input a DFA definition (as described above) and returns a sequence enumerating all strings in the language recognized by the DFA.
+
+Note: Although the DFA itself is finite and only recognizes finite-length strings it can still recognize an infinite set of finite-length strings. And because stack space is finite, make sure you don't get stuck in an infinite loop that's not producing results every so often!
+; tags - automata:seqs
+; restricted - 
+(ns offline-4clojure.p164
   (:use clojure.test))
 
 (def __
@@ -33,14 +23,62 @@
 
 (defn -main []
   (are [x] x
-(let [notrump (__ nil)]
-  (and (= {:suit :club :rank 9}  (notrump [{:suit :club :rank 4}
-                                           {:suit :club :rank 9}]))
-       (= {:suit :spade :rank 2} (notrump [{:suit :spade :rank 2}
-                                           {:suit :club :rank 10}]))))
-(= {:suit :club :rank 10} ((__ :club) [{:suit :spade :rank 2}
-                                       {:suit :club :rank 10}]))
-(= {:suit :heart :rank 8}
-   ((__ :heart) [{:suit :heart :rank 6} {:suit :heart :rank 8}
-                 {:suit :diamond :rank 10} {:suit :heart :rank 4}]))
+(= #{"a" "ab" "abc"}
+   (set (__ '{:states #{q0 q1 q2 q3}
+              :alphabet #{a b c}
+              :start q0
+              :accepts #{q1 q2 q3}
+              :transitions {q0 {a q1}
+                            q1 {b q2}
+                            q2 {c q3}}})))
+
+(= #{"hi" "hey" "hello"}
+   (set (__ '{:states #{q0 q1 q2 q3 q4 q5 q6 q7}
+              :alphabet #{e h i l o y}
+              :start q0
+              :accepts #{q2 q4 q7}
+              :transitions {q0 {h q1}
+                            q1 {i q2, e q3}
+                            q3 {l q5, y q4}
+                            q5 {l q6}
+                            q6 {o q7}}})))
+(= (set (let [ss "vwxyz"] (for [i ss, j ss, k ss, l ss] (str i j k l))))
+   (set (__ '{:states #{q0 q1 q2 q3 q4}
+              :alphabet #{v w x y z}
+              :start q0
+              :accepts #{q4}
+              :transitions {q0 {v q1, w q1, x q1, y q1, z q1}
+                            q1 {v q2, w q2, x q2, y q2, z q2}
+                            q2 {v q3, w q3, x q3, y q3, z q3}
+                            q3 {v q4, w q4, x q4, y q4, z q4}}})))
+(let [res (take 2000 (__ '{:states #{q0 q1}
+                           :alphabet #{0 1}
+                           :start q0
+                           :accepts #{q0}
+                           :transitions {q0 {0 q0, 1 q1}
+                                         q1 {0 q1, 1 q0}}}))]
+  (and (every? (partial re-matches #"0*(?:10*10*)*") res)
+       (= res (distinct res))))
+(let [res (take 2000 (__ '{:states #{q0 q1}
+                           :alphabet #{n m}
+                           :start q0
+                           :accepts #{q1}
+                           :transitions {q0 {n q0, m q1}}}))]
+  (and (every? (partial re-matches #"n*m") res)
+       (= res (distinct res))))
+(let [res (take 2000 (__ '{:states #{q0 q1 q2 q3 q4 q5 q6 q7 q8 q9}
+                           :alphabet #{i l o m p t}
+                           :start q0
+                           :accepts #{q5 q8}
+                           :transitions {q0 {l q1}
+                                         q1 {i q2, o q6}
+                                         q2 {m q3}
+                                         q3 {i q4}
+                                         q4 {t q5}
+                                         q6 {o q7}
+                                         q7 {p q8}
+                                         q8 {l q9}
+                                         q9 {o q6}}}))]
+  (and (every? (partial re-matches #"limit|(?:loop)+") res)
+       (= res (distinct res))))
 ))

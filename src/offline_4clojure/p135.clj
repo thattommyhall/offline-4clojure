@@ -1,30 +1,10 @@
-;Tricky card games - Medium
-;<p>
-;  In <a href="http://en.wikipedia.org/wiki/Trick-taking_game">trick-taking
-;  card games</a> such as bridge, spades, or hearts, cards are played
-;  in groups known as "tricks" - each player plays a single card, in
-;  order; the first player is said to "lead" to the trick. After all
-;  players have played, one card is said to have "won" the trick. How
-;  the winner is determined will vary by game, but generally the winner
-;  is the highest card played <i>in the suit that was
-;  led</i>. Sometimes (again varying by game), a particular suit will
-;  be designated "trump", meaning that its cards are more powerful than
-;  any others: if there is a trump suit, and any trumps are played,
-;  then the highest trump wins regardless of what was led.
-;</p>
-;<p>
-;  Your goal is to devise a function that can determine which of a
-;  number of cards has won a trick. You should accept a trump suit, and
-;  return a function <code>winner</code>. Winner will be called on a
-;  sequence of cards, and should return the one which wins the
-;  trick. Cards will be represented in the format returned
-;  by <a href="/problem/128/">Problem 128, Recognize Playing Cards</a>:
-;  a hash-map of <code>:suit</code> and a
-;  numeric <code>:rank</code>. Cards with a larger rank are stronger.
-;</p>
-;tags - game:cards
-;restricted - 
-(ns offline-4clojure.p141
+; Infix Calculator - Easy
+; Your friend Joe is always whining about Lisps using the prefix notation for math. Show him how you could easily write a function that does math using the infix notation. Is your favorite language that flexible, Joe?
+
+Write a function that accepts a variable length mathematical expression consisting of numbers and the operations +, -, *, and /. Assume a simple calculator that does not do precedence and instead just calculates left to right.
+; tags - higher-order-functions:math
+; restricted - 
+(ns offline-4clojure.p135
   (:use clojure.test))
 
 (def __
@@ -33,14 +13,7 @@
 
 (defn -main []
   (are [x] x
-(let [notrump (__ nil)]
-  (and (= {:suit :club :rank 9}  (notrump [{:suit :club :rank 4}
-                                           {:suit :club :rank 9}]))
-       (= {:suit :spade :rank 2} (notrump [{:suit :spade :rank 2}
-                                           {:suit :club :rank 10}]))))
-(= {:suit :club :rank 10} ((__ :club) [{:suit :spade :rank 2}
-                                       {:suit :club :rank 10}]))
-(= {:suit :heart :rank 8}
-   ((__ :heart) [{:suit :heart :rank 6} {:suit :heart :rank 8}
-                 {:suit :diamond :rank 10} {:suit :heart :rank 4}]))
-))
+(= 7  (__ 2 + 5))
+(= 42 (__ 38 + 48 - 2 / 2))
+(= 8  (__ 10 / 2 - 1 * 2))
+(= 72 (__ 20 / 2 + 2 + 4 + 8 - 6 - 10 * 9))))
