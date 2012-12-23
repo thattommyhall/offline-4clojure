@@ -61,7 +61,7 @@
 (defn write-file [n]
   (println "writing" n)
   (spit (str "src/offline_4clojure/p" n ".clj")
-        (generate-file 141)
+        (generate-file n)
         ))
 
 (defn -main
