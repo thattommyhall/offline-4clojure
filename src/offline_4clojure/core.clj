@@ -22,7 +22,7 @@
 (defn wrap-in-are [tests]
   (str "(defn -main []\n  (are [x] x\n"
        tests
-       "\n))"))
+       "\n))\n"))
 
 (defn display-vector [title entries]
   (str title " - "
@@ -34,7 +34,7 @@
 (def template-soln "(def __\n;; your solution here\n)")
 
 (defn comment [somestr]
-  (str ";"
+  (str "; "
        (string/replace somestr #"\n" "\n;")))
 
 (defn generate-file [n]
