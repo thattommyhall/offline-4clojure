@@ -17,4 +17,5 @@
       (bar [x y] (if (> (last x) 10)
                    x
                    #(foo x (+ 2 y))))]
-     (trampoline foo [] 1)))))
+     (trampoline foo [] 1)))
+))

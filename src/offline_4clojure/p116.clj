@@ -13,4 +13,5 @@
   (are [x] x
 (= false (__ 4))
 (= true (__ 563))
-(= 1103 (nth (filter __ (range)) 15))))
+(= 1103 (nth (filter __ (range)) 15))
+))

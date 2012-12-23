@@ -11,4 +11,5 @@
 
 (defn -main []
   (are [x] x
-(= __ true)))
+(= __ true)
+))

@@ -1,38 +1,38 @@
 ; Infinite Matrix - Medium
 ; <p>
-In what follows, <code>m</code>, <code>n</code>, <code>s</code>, <code>t</code> 
-denote nonnegative integers, <code>f</code> denotes a function that accepts two 
-arguments and is defined for all nonnegative integers in both arguments.
-</p>
-
-<p>
-In mathematics, the function <code>f</code> can be interpreted as an infinite 
-<a href="http://en.wikipedia.org/wiki/Matrix_%28mathematics%29">matrix</a>
-with infinitely many rows and columns that, when written, looks like an ordinary 
-matrix but its rows and columns cannot be written down completely, so are terminated 
-with ellipses. In Clojure, such infinite matrix can be represented 
-as an infinite lazy sequence of infinite lazy sequences, 
-where the inner sequences represent rows.
-</p> 
-
-<p>
-Write a function that accepts 1, 3 and 5 arguments
-<ul>
-<li>
-with the argument <code>f</code>, it returns the infinite matrix <b>A</b>  
-that has the entry in the <code>i</code>-th row and the <code>j</code>-th column 
-equal to <code>f(i,j)</code> for <code>i,j = 0,1,2,...</code>;</li>
-<li>
-with the arguments <code>f</code>, <code>m</code>, <code>n</code>, it returns 
-the infinite matrix <b>B</b> that equals the remainder of the matrix <b>A</b> 
-after the removal of the first <code>m</code> rows and the first <code>n</code> columns;</li>
-<li>
-with the arguments <code>f</code>, <code>m</code>, <code>n</code>, <code>s</code>, <code>t</code>,
-it returns the finite s-by-t matrix that consists of the first t entries of each of the first 
-<code>s</code> rows of the matrix <b>B</b> or, equivalently, that consists of the first s entries 
-of each of the first <code>t</code> columns of the matrix <b>B</b>.</li>
-</ul>
-</p>
+;In what follows, <code>m</code>, <code>n</code>, <code>s</code>, <code>t</code> 
+;denote nonnegative integers, <code>f</code> denotes a function that accepts two 
+;arguments and is defined for all nonnegative integers in both arguments.
+;</p>
+;
+;<p>
+;In mathematics, the function <code>f</code> can be interpreted as an infinite 
+;<a href="http://en.wikipedia.org/wiki/Matrix_%28mathematics%29">matrix</a>
+;with infinitely many rows and columns that, when written, looks like an ordinary 
+;matrix but its rows and columns cannot be written down completely, so are terminated 
+;with ellipses. In Clojure, such infinite matrix can be represented 
+;as an infinite lazy sequence of infinite lazy sequences, 
+;where the inner sequences represent rows.
+;</p> 
+;
+;<p>
+;Write a function that accepts 1, 3 and 5 arguments
+;<ul>
+;<li>
+;with the argument <code>f</code>, it returns the infinite matrix <b>A</b>  
+;that has the entry in the <code>i</code>-th row and the <code>j</code>-th column 
+;equal to <code>f(i,j)</code> for <code>i,j = 0,1,2,...</code>;</li>
+;<li>
+;with the arguments <code>f</code>, <code>m</code>, <code>n</code>, it returns 
+;the infinite matrix <b>B</b> that equals the remainder of the matrix <b>A</b> 
+;after the removal of the first <code>m</code> rows and the first <code>n</code> columns;</li>
+;<li>
+;with the arguments <code>f</code>, <code>m</code>, <code>n</code>, <code>s</code>, <code>t</code>,
+;it returns the finite s-by-t matrix that consists of the first t entries of each of the first 
+;<code>s</code> rows of the matrix <b>B</b> or, equivalently, that consists of the first s entries 
+;of each of the first <code>t</code> columns of the matrix <b>B</b>.</li>
+;</ul>
+;</p>
 ; tags - seqs:recursion:math
 ; restricted - for:range:iterate:repeat:cycle:drop
 (ns offline-4clojure.p168
@@ -84,4 +84,5 @@ of each of the first <code>t</code> columns of the matrix <b>B</b>.</li>
      (and (check #(= %2 [m %]) row)
           (check #(= %2 [(+ m %) n]) column)
           (check #(= %2 [(+ m %) (+ n %)]) diagonal)))
-   true)))
+   true)
+))

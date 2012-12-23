@@ -19,4 +19,5 @@
 (= (__ [1 2 3 4] [0 2 3 4 5]) 2)
 (= (__ '(:a :b :c :d) '(:a :d)) 2)
 (= (__ "ttttattttctg" "tcaaccctaccat") 10)
-(= (__ "gaattctaatctc" "caaacaaaaaattt") 9)))
+(= (__ "gaattctaatctc" "caaacaaaaaattt") 9)
+))

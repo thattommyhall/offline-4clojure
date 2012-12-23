@@ -13,4 +13,5 @@
   (are [x] x
 (= (__ "something") "something")
 (= (__ "multi-word-key") "multiWordKey")
-(= (__ "leaveMeAlone") "leaveMeAlone")))
+(= (__ "leaveMeAlone") "leaveMeAlone")
+))

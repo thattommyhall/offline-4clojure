@@ -19,4 +19,5 @@
             :while (< z 40)]
         z))
 (= __ (for [[x y] (partition 2 (range 20))]
-        (+ x y)))))
+        (+ x y)))
+))

@@ -13,4 +13,5 @@
   (are [x] x
 (= (__ "HeLlO, WoRlD!") "HLOWRD")
 (empty? (__ "nothing"))
-(= (__ "$#A(*&987Zf") "AZ")))
+(= (__ "$#A(*&987Zf") "AZ")
+))

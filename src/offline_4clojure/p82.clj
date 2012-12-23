@@ -16,4 +16,5 @@
 (= false (__ #{"to" "top" "stop" "tops" "toss"}))
 (= true (__ #{"spout" "do" "pot" "pout" "spot" "dot"}))
 (= true (__ #{"share" "hares" "shares" "hare" "are"}))
-(= false (__ #{"share" "hares" "hare" "are"}))))
+(= false (__ #{"share" "hares" "hare" "are"}))
+))

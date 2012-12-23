@@ -21,4 +21,5 @@
                  (map first) ; fibonacci numbers
                  (__ (fn [a b] ; both even or both odd
                        (= (mod a 2) (mod b 2)))
-                     :same))))))
+                     :same))))
+))

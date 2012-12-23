@@ -11,4 +11,5 @@
 
 (defn -main []
   (are [x] x
-(= __ ((fn foo [x] (when (> x 0) (conj (foo (dec x)) x))) 5))))
+(= __ ((fn foo [x] (when (> x 0) (conj (foo (dec x)) x))) 5))
+))

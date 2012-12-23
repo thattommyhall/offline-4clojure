@@ -11,4 +11,5 @@
 
 (defn -main []
   (are [x] x
-(= __ (apply str (re-seq #"[A-Z]+" "bA1B3Ce ")))))
+(= __ (apply str (re-seq #"[A-Z]+" "bA1B3Ce ")))
+))

@@ -11,4 +11,5 @@
 
 (defn -main []
   (are [x] x
-(= [2 4] (let [[a b c d e f g] (range)] __))))
+(= [2 4] (let [[a b c d e f g] (range)] __))
+))

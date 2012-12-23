@@ -1,11 +1,11 @@
 ; Universal Computation Engine - Medium
 ; 	 Given a mathematical formula in prefix notation, return a function that calculates
-	 the value of the formula.
-	 The formula can contain nested calculations using the four basic
-	 mathematical operators, numeric constants, and symbols representing variables.
-	 The returned function has to accept a single parameter containing the map
-	 of variable names to their values.
-
+;	 the value of the formula.
+;	 The formula can contain nested calculations using the four basic
+;	 mathematical operators, numeric constants, and symbols representing variables.
+;	 The returned function has to accept a single parameter containing the map
+;	 of variable names to their values.
+;
 ; tags - functions
 ; restricted - 
 (ns offline-4clojure.p121
@@ -30,4 +30,5 @@
 (= 1 ((__ '(/ (+ x 2)
               (* 3 (+ y 1))))
       '{x 4 y 1}))
+
 ))

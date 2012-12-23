@@ -11,4 +11,5 @@
 
 (defn -main []
   (are [x] x
-(= __ (.toUpperCase "hello world"))))
+(= __ (.toUpperCase "hello world"))
+))

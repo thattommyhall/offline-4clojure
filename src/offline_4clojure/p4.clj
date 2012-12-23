@@ -11,4 +11,5 @@
 
 (defn -main []
   (are [x] x
-(= (list __) '(:a :b :c))))
+(= (list __) '(:a :b :c))
+))

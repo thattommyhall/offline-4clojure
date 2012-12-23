@@ -12,4 +12,5 @@
 (defn -main []
   (are [x] x
 (let [x __]
-  (and (= (class x) x) x))))
+  (and (= (class x) x) x))
+))

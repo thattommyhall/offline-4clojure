@@ -1,9 +1,9 @@
 ; Palindromic Numbers - Medium
 ; <p>A palindromic number is a number that is the same when written forwards or backwards (e.g., 3, 99, 14341).</p>
-
-<p>Write a function which takes an integer <code>n</code>, as its only argument, and returns an increasing lazy sequence of all palindromic numbers that are not less than <code>n</code>.</p>
-
-<p>The most simple solution will exceed the time limit!</p>
+;
+;<p>Write a function which takes an integer <code>n</code>, as its only argument, and returns an increasing lazy sequence of all palindromic numbers that are not less than <code>n</code>.</p>
+;
+;<p>The most simple solution will exceed the time limit!</p>
 ; tags - seqs:math
 ; restricted - 
 (ns offline-4clojure.p150
@@ -34,4 +34,5 @@
 (= true 
    (apply < (take 6666 (__ 9999999))))
 (= (nth (__ 0) 10101)
-   9102019)))
+   9102019)
+))

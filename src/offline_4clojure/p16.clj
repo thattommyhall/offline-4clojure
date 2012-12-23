@@ -13,4 +13,5 @@
   (are [x] x
 (= (__ "Dave") "Hello, Dave!")
 (= (__ "Jenn") "Hello, Jenn!")
-(= (__ "Rhea") "Hello, Rhea!")))
+(= (__ "Rhea") "Hello, Rhea!")
+))

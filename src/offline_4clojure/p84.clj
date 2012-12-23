@@ -22,4 +22,5 @@
       #{["father" "son"] ["uncle" "cousin"] ["son" "grandson"]}]
   (= (__ progeny)
      #{["father" "son"] ["father" "grandson"]
-       ["uncle" "cousin"] ["son" "grandson"]}))))
+       ["uncle" "cousin"] ["son" "grandson"]}))
+))

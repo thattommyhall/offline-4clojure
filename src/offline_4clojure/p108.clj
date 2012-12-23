@@ -16,4 +16,5 @@
 (= 7 (__ (range) (range 0 100 7/6) [2 3 5 7 11 13]))
 (= 64 (__ (map #(* % % %) (range)) ;; perfect cubes
           (filter #(zero? (bit-and % (dec %))) (range)) ;; powers of 2
-          (iterate inc 20))) ;; at least as large as 20))
+          (iterate inc 20))) ;; at least as large as 20
+))

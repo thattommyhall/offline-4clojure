@@ -11,4 +11,5 @@
 
 (defn -main []
   (are [x] x
-(= __ (take 5 (iterate #(+ 3 %) 1)))))
+(= __ (take 5 (iterate #(+ 3 %) 1)))
+))

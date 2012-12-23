@@ -22,4 +22,5 @@
    false)
 (= (__ [1 [2 nil [3 [4 [5 nil nil] [6 nil nil]] nil]]
           [2 [3 nil [4 [6 nil nil] nil]] nil]])
-   false)))
+   false)
+))

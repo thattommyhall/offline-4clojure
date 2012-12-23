@@ -12,4 +12,5 @@
 (defn -main []
   (are [x] x
 (= __ (set '(:a :a :b :c :c :c :c :d :d)))
-(= __ (clojure.set/union #{:a :b :c} #{:b :c :d}))))
+(= __ (clojure.set/union #{:a :b :c} #{:b :c :d}))
+))
