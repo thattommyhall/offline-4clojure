@@ -1,14 +1,30 @@
-; Global take-while - Medium
-; <p><a
-href="http://clojuredocs.org/clojure_core/clojure.core/take-while">take-while</a>
-is great for filtering sequences, but it limited: you can only examine
-a single item of the sequence at a time. What if you need to keep
-track of some state as you go over the sequence?</p>
-
-<p>Write a function which accepts an integer <code>n</code>, a predicate <code>p</code>, and a sequence. It should return a lazy sequence of items in the list up to, but not including, the <code>n</code>th item that satisfies the predicate.</p>
-; tags - seqs:higher-order-functions
-; restricted - 
-(ns offline-4clojure.p114
+;Tricky card games - Medium
+;<p>
+;  In <a href="http://en.wikipedia.org/wiki/Trick-taking_game">trick-taking
+;  card games</a> such as bridge, spades, or hearts, cards are played
+;  in groups known as "tricks" - each player plays a single card, in
+;  order; the first player is said to "lead" to the trick. After all
+;  players have played, one card is said to have "won" the trick. How
+;  the winner is determined will vary by game, but generally the winner
+;  is the highest card played <i>in the suit that was
+;  led</i>. Sometimes (again varying by game), a particular suit will
+;  be designated "trump", meaning that its cards are more powerful than
+;  any others: if there is a trump suit, and any trumps are played,
+;  then the highest trump wins regardless of what was led.
+;</p>
+;<p>
+;  Your goal is to devise a function that can determine which of a
+;  number of cards has won a trick. You should accept a trump suit, and
+;  return a function <code>winner</code>. Winner will be called on a
+;  sequence of cards, and should return the one which wins the
+;  trick. Cards will be represented in the format returned
+;  by <a href="/problem/128/">Problem 128, Recognize Playing Cards</a>:
+;  a hash-map of <code>:suit</code> and a
+;  numeric <code>:rank</code>. Cards with a larger rank are stronger.
+;</p>
+;tags - game:cards
+;restricted - 
+(ns offline-4clojure.p141
   (:use clojure.test))
 
 (def __
@@ -17,12 +33,14 @@ track of some state as you go over the sequence?</p>
 
 (defn -main []
   (are [x] x
-(= [2 3 5 7 11 13]
-   (__ 4 #(= 2 (mod % 3))
-         [2 3 5 7 11 13 17 19 23]))
-(= ["this" "is" "a" "sentence"]
-   (__ 3 #(some #{\i} %)
-         ["this" "is" "a" "sentence" "i" "wrote"]))
-(= ["this" "is"]
-   (__ 1 #{"a"}
-         ["this" "is" "a" "sentence" "i" "wrote"]))))
+(let [notrump (__ nil)]
+  (and (= {:suit :club :rank 9}  (notrump [{:suit :club :rank 4}
+                                           {:suit :club :rank 9}]))
+       (= {:suit :spade :rank 2} (notrump [{:suit :spade :rank 2}
+                                           {:suit :club :rank 10}]))))
+(= {:suit :club :rank 10} ((__ :club) [{:suit :spade :rank 2}
+                                       {:suit :club :rank 10}]))
+(= {:suit :heart :rank 8}
+   ((__ :heart) [{:suit :heart :rank 6} {:suit :heart :rank 8}
+                 {:suit :diamond :rank 10} {:suit :heart :rank 4}]))
+))

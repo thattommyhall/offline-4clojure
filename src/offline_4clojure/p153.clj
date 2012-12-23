@@ -1,18 +1,30 @@
-; Pairwise Disjoint Sets - Easy
-; 
-<p>
-Given a set of sets, create a function which returns <code>true</code> 
-if no two of those sets have any elements in common<sup>1</sup> and <code>false</code> otherwise. 
-Some of the test cases are a bit tricky, so pay a little more attention to them. 
-</p>
-
-<p>
-<sup>1</sup>Such sets are usually called <i>pairwise disjoint</i> or <i>mutually disjoint</i>.
-</p>
-
-; tags - set-theory
-; restricted - 
-(ns offline-4clojure.p153
+;Tricky card games - Medium
+;<p>
+;  In <a href="http://en.wikipedia.org/wiki/Trick-taking_game">trick-taking
+;  card games</a> such as bridge, spades, or hearts, cards are played
+;  in groups known as "tricks" - each player plays a single card, in
+;  order; the first player is said to "lead" to the trick. After all
+;  players have played, one card is said to have "won" the trick. How
+;  the winner is determined will vary by game, but generally the winner
+;  is the highest card played <i>in the suit that was
+;  led</i>. Sometimes (again varying by game), a particular suit will
+;  be designated "trump", meaning that its cards are more powerful than
+;  any others: if there is a trump suit, and any trumps are played,
+;  then the highest trump wins regardless of what was led.
+;</p>
+;<p>
+;  Your goal is to devise a function that can determine which of a
+;  number of cards has won a trick. You should accept a trump suit, and
+;  return a function <code>winner</code>. Winner will be called on a
+;  sequence of cards, and should return the one which wins the
+;  trick. Cards will be represented in the format returned
+;  by <a href="/problem/128/">Problem 128, Recognize Playing Cards</a>:
+;  a hash-map of <code>:suit</code> and a
+;  numeric <code>:rank</code>. Cards with a larger rank are stronger.
+;</p>
+;tags - game:cards
+;restricted - 
+(ns offline-4clojure.p141
   (:use clojure.test))
 
 (def __
@@ -21,42 +33,14 @@ Some of the test cases are a bit tricky, so pay a little more attention to them.
 
 (defn -main []
   (are [x] x
-(= (__ #{#{\U} #{\s} #{\e \R \E} #{\P \L} #{\.}})
-   true)
-(= (__ #{#{:a :b :c :d :e}
-         #{:a :b :c :d}
-         #{:a :b :c}
-         #{:a :b}
-         #{:a}})
-   false)
-(= (__ #{#{[1 2 3] [4 5]}
-         #{[1 2] [3 4 5]}
-         #{[1] [2] 3 4 5}
-         #{1 2 [3 4] [5]}})
-   true)
-(= (__ #{#{'a 'b}
-         #{'c 'd 'e}
-         #{'f 'g 'h 'i}
-         #{''a ''c ''f}})
-   true)
-(= (__ #{#{'(:x :y :z) '(:x :y) '(:z) '()}
-         #{#{:x :y :z} #{:x :y} #{:z} #{}}
-         #{'[:x :y :z] [:x :y] [:z] [] {}}})
-   false)
-(= (__ #{#{(= "true") false}
-         #{:yes :no}
-         #{(class 1) 0}
-         #{(symbol "true") 'false}
-         #{(keyword "yes") ::no}
-         #{(class '1) (int \0)}})
-   false)
-(= (__ #{#{distinct?}
-         #{#(-> %) #(-> %)}
-         #{#(-> %) #(-> %) #(-> %)}
-         #{#(-> %) #(-> %) #(-> %)}})
-   true)
-(= (__ #{#{(#(-> *)) + (quote mapcat) #_ nil}
-         #{'+ '* mapcat (comment mapcat)}
-         #{(do) set contains? nil?}
-         #{, , , #_, , empty?}})
-   false)))
+(let [notrump (__ nil)]
+  (and (= {:suit :club :rank 9}  (notrump [{:suit :club :rank 4}
+                                           {:suit :club :rank 9}]))
+       (= {:suit :spade :rank 2} (notrump [{:suit :spade :rank 2}
+                                           {:suit :club :rank 10}]))))
+(= {:suit :club :rank 10} ((__ :club) [{:suit :spade :rank 2}
+                                       {:suit :club :rank 10}]))
+(= {:suit :heart :rank 8}
+   ((__ :heart) [{:suit :heart :rank 6} {:suit :heart :rank 8}
+                 {:suit :diamond :rank 10} {:suit :heart :rank 4}]))
+))

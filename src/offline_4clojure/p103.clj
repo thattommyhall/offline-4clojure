@@ -1,10 +1,30 @@
-; Generating k-combinations - Medium
-; Given a sequence S consisting of n elements generate all <a href="https://secure.wikimedia.org/wikipedia/en/wiki/Combination">k-combinations</a> of S, i. e. generate all possible sets consisting of k distinct elements taken from S.
-
-The number of k-combinations for a sequence is equal to the <a href="https://secure.wikimedia.org/wikipedia/en/wiki/Binomial_coefficient">binomial coefficient</a>.
-; tags - seqs:combinatorics
-; restricted - 
-(ns offline-4clojure.p103
+;Tricky card games - Medium
+;<p>
+;  In <a href="http://en.wikipedia.org/wiki/Trick-taking_game">trick-taking
+;  card games</a> such as bridge, spades, or hearts, cards are played
+;  in groups known as "tricks" - each player plays a single card, in
+;  order; the first player is said to "lead" to the trick. After all
+;  players have played, one card is said to have "won" the trick. How
+;  the winner is determined will vary by game, but generally the winner
+;  is the highest card played <i>in the suit that was
+;  led</i>. Sometimes (again varying by game), a particular suit will
+;  be designated "trump", meaning that its cards are more powerful than
+;  any others: if there is a trump suit, and any trumps are played,
+;  then the highest trump wins regardless of what was led.
+;</p>
+;<p>
+;  Your goal is to devise a function that can determine which of a
+;  number of cards has won a trick. You should accept a trump suit, and
+;  return a function <code>winner</code>. Winner will be called on a
+;  sequence of cards, and should return the one which wins the
+;  trick. Cards will be represented in the format returned
+;  by <a href="/problem/128/">Problem 128, Recognize Playing Cards</a>:
+;  a hash-map of <code>:suit</code> and a
+;  numeric <code>:rank</code>. Cards with a larger rank are stronger.
+;</p>
+;tags - game:cards
+;restricted - 
+(ns offline-4clojure.p141
   (:use clojure.test))
 
 (def __
@@ -13,11 +33,14 @@ The number of k-combinations for a sequence is equal to the <a href="https://sec
 
 (defn -main []
   (are [x] x
-(= (__ 1 #{4 5 6}) #{#{4} #{5} #{6}})
-(= (__ 10 #{4 5 6}) #{})
-(= (__ 2 #{0 1 2}) #{#{0 1} #{0 2} #{1 2}})
-(= (__ 3 #{0 1 2 3 4}) #{#{0 1 2} #{0 1 3} #{0 1 4} #{0 2 3} #{0 2 4}
-                         #{0 3 4} #{1 2 3} #{1 2 4} #{1 3 4} #{2 3 4}})
-(= (__ 4 #{[1 2 3] :a "abc" "efg"}) #{#{[1 2 3] :a "abc" "efg"}})
-(= (__ 2 #{[1 2 3] :a "abc" "efg"}) #{#{[1 2 3] :a} #{[1 2 3] "abc"} #{[1 2 3] "efg"}
-                                    #{:a "abc"} #{:a "efg"} #{"abc" "efg"}})))
+(let [notrump (__ nil)]
+  (and (= {:suit :club :rank 9}  (notrump [{:suit :club :rank 4}
+                                           {:suit :club :rank 9}]))
+       (= {:suit :spade :rank 2} (notrump [{:suit :spade :rank 2}
+                                           {:suit :club :rank 10}]))))
+(= {:suit :club :rank 10} ((__ :club) [{:suit :spade :rank 2}
+                                       {:suit :club :rank 10}]))
+(= {:suit :heart :rank 8}
+   ((__ :heart) [{:suit :heart :rank 6} {:suit :heart :rank 8}
+                 {:suit :diamond :rank 10} {:suit :heart :rank 4}]))
+))

@@ -1,12 +1,30 @@
-; Veitch, Please! - Hard
-; Create a function which accepts as input a boolean algebra function in the form of a set of sets, where the inner sets are collections of symbols corresponding to the input boolean variables which satisfy the function (the inputs of the inner sets are conjoint, and the sets themselves are disjoint... also known as canonical minterms).  Note:&nbsp;capitalized symbols represent truth, and lower-case symbols represent negation of the inputs.  Your function must return the minimal function which is logically equivalent to the input.
-</br></br>
-PS &mdash; You may want to give this a read before proceeding: <a href="http://en.wikipedia.org/wiki/K_map">K-Maps</a>
-</br>
-PPS &mdash; If you're interested in logic programming more generally, you should also check out: <a href="https://github.com/clojure/core.logic">core.logic</a>
-; tags - logic:data-analysis
-; restricted - 
-(ns offline-4clojure.p140
+;Tricky card games - Medium
+;<p>
+;  In <a href="http://en.wikipedia.org/wiki/Trick-taking_game">trick-taking
+;  card games</a> such as bridge, spades, or hearts, cards are played
+;  in groups known as "tricks" - each player plays a single card, in
+;  order; the first player is said to "lead" to the trick. After all
+;  players have played, one card is said to have "won" the trick. How
+;  the winner is determined will vary by game, but generally the winner
+;  is the highest card played <i>in the suit that was
+;  led</i>. Sometimes (again varying by game), a particular suit will
+;  be designated "trump", meaning that its cards are more powerful than
+;  any others: if there is a trump suit, and any trumps are played,
+;  then the highest trump wins regardless of what was led.
+;</p>
+;<p>
+;  Your goal is to devise a function that can determine which of a
+;  number of cards has won a trick. You should accept a trump suit, and
+;  return a function <code>winner</code>. Winner will be called on a
+;  sequence of cards, and should return the one which wins the
+;  trick. Cards will be represented in the format returned
+;  by <a href="/problem/128/">Problem 128, Recognize Playing Cards</a>:
+;  a hash-map of <code>:suit</code> and a
+;  numeric <code>:rank</code>. Cards with a larger rank are stronger.
+;</p>
+;tags - game:cards
+;restricted - 
+(ns offline-4clojure.p141
   (:use clojure.test))
 
 (def __
@@ -15,72 +33,14 @@ PPS &mdash; If you're interested in logic programming more generally, you should
 
 (defn -main []
   (are [x] x
-(= (__ #{#{'a 'B 'C 'd}
-         #{'A 'b 'c 'd}
-         #{'A 'b 'c 'D}
-         #{'A 'b 'C 'd}
-         #{'A 'b 'C 'D}
-         #{'A 'B 'c 'd}
-         #{'A 'B 'c 'D}
-         #{'A 'B 'C 'd}})
-   #{#{'A 'c} 
-     #{'A 'b}
-     #{'B 'C 'd}})
-(= (__ #{#{'A 'B 'C 'D}
-         #{'A 'B 'C 'd}})
-   #{#{'A 'B 'C}})
-(= (__ #{#{'a 'b 'c 'd}
-         #{'a 'B 'c 'd}
-         #{'a 'b 'c 'D}
-         #{'a 'B 'c 'D}
-         #{'A 'B 'C 'd}
-         #{'A 'B 'C 'D}
-         #{'A 'b 'C 'd}
-         #{'A 'b 'C 'D}})
-   #{#{'a 'c}
-     #{'A 'C}})
-(= (__ #{#{'a 'b 'c} 
-         #{'a 'B 'c}
-         #{'a 'b 'C}
-         #{'a 'B 'C}})
-   #{#{'a}})
-(= (__ #{#{'a 'B 'c 'd}
-         #{'A 'B 'c 'D}
-         #{'A 'b 'C 'D}
-         #{'a 'b 'c 'D}
-         #{'a 'B 'C 'D}
-         #{'A 'B 'C 'd}})
-   #{#{'a 'B 'c 'd}
-     #{'A 'B 'c 'D}
-     #{'A 'b 'C 'D}
-     #{'a 'b 'c 'D}
-     #{'a 'B 'C 'D}
-     #{'A 'B 'C 'd}})
-(= (__ #{#{'a 'b 'c 'd}
-         #{'a 'B 'c 'd}
-         #{'A 'B 'c 'd}
-         #{'a 'b 'c 'D}
-         #{'a 'B 'c 'D}
-         #{'A 'B 'c 'D}})
-   #{#{'a 'c}
-     #{'B 'c}})
-(= (__ #{#{'a 'B 'c 'd}
-         #{'A 'B 'c 'd}
-         #{'a 'b 'c 'D}
-         #{'a 'b 'C 'D}
-         #{'A 'b 'c 'D}
-         #{'A 'b 'C 'D}
-         #{'a 'B 'C 'd}
-         #{'A 'B 'C 'd}})
-   #{#{'B 'd}
-     #{'b 'D}})
-(= (__ #{#{'a 'b 'c 'd}
-         #{'A 'b 'c 'd}
-         #{'a 'B 'c 'D}
-         #{'A 'B 'c 'D}
-         #{'a 'B 'C 'D}
-         #{'A 'B 'C 'D}
-         #{'a 'b 'C 'd}
-         #{'A 'b 'C 'd}})
-   #{#{'B 'D}
-     #{'b 'd}})))
+(let [notrump (__ nil)]
+  (and (= {:suit :club :rank 9}  (notrump [{:suit :club :rank 4}
+                                           {:suit :club :rank 9}]))
+       (= {:suit :spade :rank 2} (notrump [{:suit :spade :rank 2}
+                                           {:suit :club :rank 10}]))))
+(= {:suit :club :rank 10} ((__ :club) [{:suit :spade :rank 2}
+                                       {:suit :club :rank 10}]))
+(= {:suit :heart :rank 8}
+   ((__ :heart) [{:suit :heart :rank 6} {:suit :heart :rank 8}
+                 {:suit :diamond :rank 10} {:suit :heart :rank 4}]))
+))

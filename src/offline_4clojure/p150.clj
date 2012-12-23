@@ -1,12 +1,30 @@
-; Palindromic Numbers - Medium
-; <p>A palindromic number is a number that is the same when written forwards or backwards (e.g., 3, 99, 14341).</p>
-
-<p>Write a function which takes an integer <code>n</code>, as its only argument, and returns an increasing lazy sequence of all palindromic numbers that are not less than <code>n</code>.</p>
-
-<p>The most simple solution will exceed the time limit!</p>
-; tags - seqs:math
-; restricted - 
-(ns offline-4clojure.p150
+;Tricky card games - Medium
+;<p>
+;  In <a href="http://en.wikipedia.org/wiki/Trick-taking_game">trick-taking
+;  card games</a> such as bridge, spades, or hearts, cards are played
+;  in groups known as "tricks" - each player plays a single card, in
+;  order; the first player is said to "lead" to the trick. After all
+;  players have played, one card is said to have "won" the trick. How
+;  the winner is determined will vary by game, but generally the winner
+;  is the highest card played <i>in the suit that was
+;  led</i>. Sometimes (again varying by game), a particular suit will
+;  be designated "trump", meaning that its cards are more powerful than
+;  any others: if there is a trump suit, and any trumps are played,
+;  then the highest trump wins regardless of what was led.
+;</p>
+;<p>
+;  Your goal is to devise a function that can determine which of a
+;  number of cards has won a trick. You should accept a trump suit, and
+;  return a function <code>winner</code>. Winner will be called on a
+;  sequence of cards, and should return the one which wins the
+;  trick. Cards will be represented in the format returned
+;  by <a href="/problem/128/">Problem 128, Recognize Playing Cards</a>:
+;  a hash-map of <code>:suit</code> and a
+;  numeric <code>:rank</code>. Cards with a larger rank are stronger.
+;</p>
+;tags - game:cards
+;restricted - 
+(ns offline-4clojure.p141
   (:use clojure.test))
 
 (def __
@@ -15,23 +33,14 @@
 
 (defn -main []
   (are [x] x
-(= (take 26 (__ 0))
-   [0 1 2 3 4 5 6 7 8 9 
-    11 22 33 44 55 66 77 88 99 
-    101 111 121 131 141 151 161])
-(= (take 16 (__ 162))
-   [171 181 191 202 
-    212 222 232 242 
-    252 262 272 282 
-    292 303 313 323])
-(= (take 6 (__ 1234550000))
-   [1234554321 1234664321 1234774321 
-    1234884321 1234994321 1235005321])
-(= (first (__ (* 111111111 111111111)))
-   (* 111111111 111111111))
-(= (set (take 199 (__ 0)))
-   (set (map #(first (__ %)) (range 0 10000))))
-(= true 
-   (apply < (take 6666 (__ 9999999))))
-(= (nth (__ 0) 10101)
-   9102019)))
+(let [notrump (__ nil)]
+  (and (= {:suit :club :rank 9}  (notrump [{:suit :club :rank 4}
+                                           {:suit :club :rank 9}]))
+       (= {:suit :spade :rank 2} (notrump [{:suit :spade :rank 2}
+                                           {:suit :club :rank 10}]))))
+(= {:suit :club :rank 10} ((__ :club) [{:suit :spade :rank 2}
+                                       {:suit :club :rank 10}]))
+(= {:suit :heart :rank 8}
+   ((__ :heart) [{:suit :heart :rank 6} {:suit :heart :rank 8}
+                 {:suit :diamond :rank 10} {:suit :heart :rank 4}]))
+))
