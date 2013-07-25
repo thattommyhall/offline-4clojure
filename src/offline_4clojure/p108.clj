@@ -1,5 +1,5 @@
 ; Lazy Searching - Medium
-; <p>Given any number of sequences, each sorted from smallest to largest, find the smallest number which appears in each sequence. The sequences may be infinite, so be careful to search lazily.</p>
+; <p>Given any number of sequences, each sorted from smallest to largest, find the smallest single number which appears in all of the sequences. The sequences may be infinite, so be careful to search lazily.</p>
 ; tags - seqs:sorting
 ; restricted - 
 (ns offline-4clojure.p108

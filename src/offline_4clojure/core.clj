@@ -67,4 +67,5 @@
 (defn -main
   [& args]
   (for [i (range 0 200)]
-    (future (write-file i))))
+    (future (write-file i)))
+  (shutdown-agents))
