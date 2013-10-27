@@ -1,7 +1,7 @@
-; Find the odd numbers - Easy
-; Write a function which returns only the odd numbers from a sequence.
-; tags - seqs
-; restricted - 
+;; Find the odd numbers - Easy
+;; Write a function which returns only the odd numbers from a sequence.
+;; tags - seqs
+;; restricted - 
 (ns offline-4clojure.p25
   (:use clojure.test))
 

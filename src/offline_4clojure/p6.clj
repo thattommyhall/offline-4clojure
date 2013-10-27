@@ -1,7 +1,7 @@
-; Intro to Vectors - Elementary
-; Vectors can be constructed several ways.  You can compare them with lists.
-; tags - 
-; restricted - 
+;; Intro to Vectors - Elementary
+;; Vectors can be constructed several ways.  You can compare them with lists.
+;; tags - 
+;; restricted - 
 (ns offline-4clojure.p6
   (:use clojure.test))
 

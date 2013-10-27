@@ -1,7 +1,7 @@
-; Implement range - Easy
-; Write a function which creates a list of all integers in a given range.
-; tags - seqs:core-functions
-; restricted - range
+;; Implement range - Easy
+;; Write a function which creates a list of all integers in a given range.
+;; tags - seqs:core-functions
+;; restricted - range
 (ns offline-4clojure.p34
   (:use clojure.test))
 

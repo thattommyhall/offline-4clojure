@@ -1,7 +1,7 @@
-; Read a binary number - Easy
-; Convert a binary number, provided in the form of a string, to its numerical value.
-; tags - 
-; restricted - 
+;; Read a binary number - Easy
+;; Convert a binary number, provided in the form of a string, to its numerical value.
+;; tags - 
+;; restricted - 
 (ns offline-4clojure.p122
   (:use clojure.test))
 

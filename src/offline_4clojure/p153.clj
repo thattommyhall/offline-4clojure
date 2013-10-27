@@ -1,17 +1,17 @@
-; Pairwise Disjoint Sets - Easy
-; 
-;<p>
-;Given a set of sets, create a function which returns <code>true</code> 
-;if no two of those sets have any elements in common<sup>1</sup> and <code>false</code> otherwise. 
-;Some of the test cases are a bit tricky, so pay a little more attention to them. 
-;</p>
-;
-;<p>
-;<sup>1</sup>Such sets are usually called <i>pairwise disjoint</i> or <i>mutually disjoint</i>.
-;</p>
-;
-; tags - set-theory
-; restricted - 
+;; Pairwise Disjoint Sets - Easy
+;; 
+;;<p>
+;;Given a set of sets, create a function which returns <code>true</code> 
+;;if no two of those sets have any elements in common<sup>1</sup> and <code>false</code> otherwise. 
+;;Some of the test cases are a bit tricky, so pay a little more attention to them. 
+;;</p>
+;;
+;;<p>
+;;<sup>1</sup>Such sets are usually called <i>pairwise disjoint</i> or <i>mutually disjoint</i>.
+;;</p>
+;;
+;; tags - set-theory
+;; restricted - 
 (ns offline-4clojure.p153
   (:use clojure.test))
 

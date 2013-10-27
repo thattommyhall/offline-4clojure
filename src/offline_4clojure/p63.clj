@@ -1,7 +1,7 @@
-; Group a Sequence - Easy
-; Given a function f and a sequence s, write a function which returns a map.  The keys should be the values of f applied to each item in s.  The value at each key should be a vector of corresponding items in the order they appear in s.
-; tags - core-functions
-; restricted - group-by
+;; Group a Sequence - Easy
+;; Given a function f and a sequence s, write a function which returns a map.  The keys should be the values of f applied to each item in s.  The value at each key should be a vector of corresponding items in the order they appear in s.
+;; tags - core-functions
+;; restricted - group-by
 (ns offline-4clojure.p63
   (:use clojure.test))
 

@@ -1,7 +1,7 @@
-; Maximum value - Easy
-; Write a function which takes a variable number of parameters and returns the maximum value.
-; tags - core-functions
-; restricted - max:max-key
+;; Maximum value - Easy
+;; Write a function which takes a variable number of parameters and returns the maximum value.
+;; tags - core-functions
+;; restricted - max:max-key
 (ns offline-4clojure.p38
   (:use clojure.test))
 

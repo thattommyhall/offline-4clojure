@@ -1,7 +1,7 @@
-; Intro to Functions - Elementary
-; Clojure has many different ways to create functions.
-; tags - 
-; restricted - 
+;; Intro to Functions - Elementary
+;; Clojure has many different ways to create functions.
+;; tags - 
+;; restricted - 
 (ns offline-4clojure.p14
   (:use clojure.test))
 

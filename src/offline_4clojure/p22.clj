@@ -1,7 +1,7 @@
-; Count a Sequence - Easy
-; Write a function which returns the total number of elements in a sequence.
-; tags - seqs:core-functions
-; restricted - count
+;; Count a Sequence - Easy
+;; Write a function which returns the total number of elements in a sequence.
+;; tags - seqs:core-functions
+;; restricted - count
 (ns offline-4clojure.p22
   (:use clojure.test))
 

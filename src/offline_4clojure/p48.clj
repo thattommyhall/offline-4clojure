@@ -1,7 +1,7 @@
-; Intro to some - Easy
-; The some function takes a predicate function and a collection.  It returns the first logical true value of (predicate x) where x is an item in the collection.
-; tags - 
-; restricted - 
+;; Intro to some - Easy
+;; The some function takes a predicate function and a collection.  It returns the first logical true value of (predicate x) where x is an item in the collection.
+;; tags - 
+;; restricted - 
 (ns offline-4clojure.p48
   (:use clojure.test))
 

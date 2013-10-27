@@ -1,7 +1,7 @@
-; Double Down - Elementary
-; Write a function which doubles a number.
-; tags - 
-; restricted - 
+;; Double Down - Elementary
+;; Write a function which doubles a number.
+;; tags - 
+;; restricted - 
 (ns offline-4clojure.p15
   (:use clojure.test))
 

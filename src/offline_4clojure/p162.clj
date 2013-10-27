@@ -1,7 +1,7 @@
-; Logical falsity and truth - Elementary
-; In Clojure, only nil and false representing the values of logical falsity in conditional tests - anything else is logical truth.
-; tags - logic
-; restricted - 
+;; Logical falsity and truth - Elementary
+;; In Clojure, only nil and false represent the values of logical falsity in conditional tests - anything else is logical truth.
+;; tags - logic
+;; restricted - 
 (ns offline-4clojure.p162
   (:use clojure.test))
 

@@ -1,7 +1,7 @@
-; Juxtaposition - Medium
-; Take a set of functions and return a new function that takes a variable number of arguments and returns a sequence containing the result of applying each function left-to-right to the argument list.
-; tags - higher-order-functions:core-functions
-; restricted - juxt
+;; Juxtaposition - Medium
+;; Take a set of functions and return a new function that takes a variable number of arguments and returns a sequence containing the result of applying each function left-to-right to the argument list.
+;; tags - higher-order-functions:core-functions
+;; restricted - juxt
 (ns offline-4clojure.p59
   (:use clojure.test))
 

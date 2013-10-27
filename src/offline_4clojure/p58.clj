@@ -1,7 +1,7 @@
-; Function Composition - Medium
-; Write a function which allows you to create function compositions.  The parameter list should take a variable number of functions, and create a function applies them from right-to-left.
-; tags - higher-order-functions:core-functions
-; restricted - comp
+;; Function Composition - Medium
+;; Write a function which allows you to create function compositions.  The parameter list should take a variable number of functions, and create a function applies them from right-to-left.
+;; tags - higher-order-functions:core-functions
+;; restricted - comp
 (ns offline-4clojure.p58
   (:use clojure.test))
 

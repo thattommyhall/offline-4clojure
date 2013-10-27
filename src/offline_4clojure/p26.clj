@@ -1,7 +1,7 @@
-; Fibonacci Sequence - Easy
-; Write a function which returns the first X fibonacci numbers.
-; tags - Fibonacci:seqs
-; restricted - 
+;; Fibonacci Sequence - Easy
+;; Write a function which returns the first X fibonacci numbers.
+;; tags - Fibonacci:seqs
+;; restricted - 
 (ns offline-4clojure.p26
   (:use clojure.test))
 

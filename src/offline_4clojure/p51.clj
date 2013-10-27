@@ -1,7 +1,7 @@
-; Advanced Destructuring - Easy
-; Here is an example of some more sophisticated destructuring.
-; tags - destructuring
-; restricted - 
+;; Advanced Destructuring - Easy
+;; Here is an example of some more sophisticated destructuring.
+;; tags - destructuring
+;; restricted - 
 (ns offline-4clojure.p51
   (:use clojure.test))
 

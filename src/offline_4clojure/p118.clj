@@ -1,7 +1,7 @@
-; Re-implement Map - Easy
-; <p>Map is one of the core elements of a functional programming language. Given a function <code>f</code> and an input sequence <code>s</code>, return a lazy sequence of <code>(f x)</code> for each element <code>x</code> in <code>s</code>.
-; tags - core-seqs
-; restricted - map:map-indexed:mapcat:for
+;; Re-implement Map - Easy
+;; <p>Map is one of the core elements of a functional programming language. Given a function <code>f</code> and an input sequence <code>s</code>, return a lazy sequence of <code>(f x)</code> for each element <code>x</code> in <code>s</code>.
+;; tags - core-seqs
+;; restricted - map:map-indexed:mapcat:for
 (ns offline-4clojure.p118
   (:use clojure.test))
 

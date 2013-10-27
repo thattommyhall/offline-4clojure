@@ -1,7 +1,7 @@
-; Rotate Sequence - Medium
-; Write a function which can rotate a sequence in either direction.
-; tags - seqs
-; restricted - 
+;; Rotate Sequence - Medium
+;; Write a function which can rotate a sequence in either direction.
+;; tags - seqs
+;; restricted - 
 (ns offline-4clojure.p44
   (:use clojure.test))
 

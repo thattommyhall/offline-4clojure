@@ -1,7 +1,7 @@
-; Penultimate Element - Easy
-; Write a function which returns the second to last element from a sequence.
-; tags - seqs
-; restricted - 
+;; Penultimate Element - Easy
+;; Write a function which returns the second to last element from a sequence.
+;; tags - seqs
+;; restricted - 
 (ns offline-4clojure.p20
   (:use clojure.test))
 

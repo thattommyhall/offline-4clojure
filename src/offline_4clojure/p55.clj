@@ -1,7 +1,7 @@
-; Count Occurrences - Medium
-; Write a function which returns a map containing the number of occurences of each distinct item in a sequence.
-; tags - seqs:core-functions
-; restricted - frequencies
+;; Count Occurrences - Medium
+;; Write a function which returns a map containing the number of occurences of each distinct item in a sequence.
+;; tags - seqs:core-functions
+;; restricted - frequencies
 (ns offline-4clojure.p55
   (:use clojure.test))
 

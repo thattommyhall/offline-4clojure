@@ -1,7 +1,7 @@
-; Least Common Multiple - Easy
-; Write a function which calculates the <a href="http://en.wikipedia.org/wiki/Least_common_multiple">least common multiple</a>.  Your function should accept a variable number of positive integers or ratios. 
-; tags - math
-; restricted - 
+;; Least Common Multiple - Easy
+;; Write a function which calculates the <a href="http://en.wikipedia.org/wiki/Least_common_multiple">least common multiple</a>.  Your function should accept a variable number of positive integers or ratios. 
+;; tags - math
+;; restricted - 
 (ns offline-4clojure.p100
   (:use clojure.test))
 

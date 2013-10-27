@@ -1,7 +1,7 @@
-; Through the Looking Class - Easy
-; Enter a value which satisfies the following:
-; tags - fun:brain-teaser
-; restricted - 
+;; Through the Looking Class - Easy
+;; Enter a value which satisfies the following:
+;; tags - fun:brain-teaser
+;; restricted - 
 (ns offline-4clojure.p126
   (:use clojure.test))
 

@@ -1,8 +1,8 @@
-; Graph Connectivity - Hard
-; Given a graph, determine whether the graph is connected. A connected graph is such that a path exists between any two given nodes.<br/><br/>-Your function must return true if the graph is connected and false otherwise.<br/><br/>-You will be given a set of tuples representing the edges of a graph. Each member of a tuple being a vertex/node in the graph.<br/><br/>-Each edge is undirected (can be traversed either direction).
-;
-; tags - graph-theory
-; restricted - 
+;; Graph Connectivity - Hard
+;; Given a graph, determine whether the graph is connected. A connected graph is such that a path exists between any two given nodes.<br/><br/>-Your function must return true if the graph is connected and false otherwise.<br/><br/>-You will be given a set of tuples representing the edges of a graph. Each member of a tuple being a vertex/node in the graph.<br/><br/>-Each edge is undirected (can be traversed either direction).
+;;
+;; tags - graph-theory
+;; restricted - 
 (ns offline-4clojure.p91
   (:use clojure.test))
 

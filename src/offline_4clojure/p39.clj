@@ -1,7 +1,7 @@
-; Interleave Two Seqs - Easy
-; Write a function which takes two sequences and returns the first item from each, then the second item from each, then the third, etc.
-; tags - seqs:core-functions
-; restricted - interleave
+;; Interleave Two Seqs - Easy
+;; Write a function which takes two sequences and returns the first item from each, then the second item from each, then the third, etc.
+;; tags - seqs:core-functions
+;; restricted - interleave
 (ns offline-4clojure.p39
   (:use clojure.test))
 

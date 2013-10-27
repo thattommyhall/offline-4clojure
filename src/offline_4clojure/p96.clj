@@ -1,7 +1,7 @@
-; Beauty is Symmetry - Easy
-; Let us define a binary tree as "symmetric" if the left half of the tree is the mirror image of the right half of the tree.  Write a predicate to determine whether or not a given binary tree is symmetric. (see <a href='/problem/95'>To Tree, or not to Tree</a> for a reminder on the tree representation we're using).
-; tags - trees
-; restricted - 
+;; Beauty is Symmetry - Easy
+;; Let us define a binary tree as "symmetric" if the left half of the tree is the mirror image of the right half of the tree.  Write a predicate to determine whether or not a given binary tree is symmetric. (see <a href='/problem/95'>To Tree, or not to Tree</a> for a reminder on the tree representation we're using).
+;; tags - trees
+;; restricted - 
 (ns offline-4clojure.p96
   (:use clojure.test))
 

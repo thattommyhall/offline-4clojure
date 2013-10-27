@@ -1,13 +1,13 @@
-; Universal Computation Engine - Medium
-; 	 Given a mathematical formula in prefix notation, return a function that calculates
-;	 the value of the formula.
-;	 The formula can contain nested calculations using the four basic
-;	 mathematical operators, numeric constants, and symbols representing variables.
-;	 The returned function has to accept a single parameter containing the map
-;	 of variable names to their values.
-;
-; tags - functions
-; restricted - 
+;; Universal Computation Engine - Medium
+;; 	 Given a mathematical formula in prefix notation, return a function that calculates
+;;	 the value of the formula.
+;;	 The formula can contain nested calculations using the four basic
+;;	 mathematical operators, numeric constants, and symbols representing variables.
+;;	 The returned function has to accept a single parameter containing the map
+;;	 of variable names to their values.
+;;
+;; tags - functions
+;; restricted - 
 (ns offline-4clojure.p121
   (:use clojure.test))
 

@@ -1,7 +1,7 @@
-; Interpose a Seq - Easy
-; Write a function which separates the items of a sequence by an arbitrary value.
-; tags - seqs:core-functions
-; restricted - interpose
+;; Interpose a Seq - Easy
+;; Write a function which separates the items of a sequence by an arbitrary value.
+;; tags - seqs:core-functions
+;; restricted - interpose
 (ns offline-4clojure.p40
   (:use clojure.test))
 

@@ -1,7 +1,7 @@
-; Identify keys and values - Medium
-; Given an input sequence of keywords and numbers, create a map such that each key in the map is a keyword, and the value is a sequence of all the numbers (if any) between it and the next keyword in the sequence.
-; tags - maps:seqs
-; restricted - 
+;; Identify keys and values - Medium
+;; Given an input sequence of keywords and numbers, create a map such that each key in the map is a keyword, and the value is a sequence of all the numbers (if any) between it and the next keyword in the sequence.
+;; tags - maps:seqs
+;; restricted - 
 (ns offline-4clojure.p105
   (:use clojure.test))
 

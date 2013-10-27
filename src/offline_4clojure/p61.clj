@@ -1,7 +1,7 @@
-; Map Construction - Easy
-; Write a function which takes a vector of keys and a vector of values and constructs a map from them.
-; tags - core-functions
-; restricted - zipmap
+;; Map Construction - Easy
+;; Write a function which takes a vector of keys and a vector of values and constructs a map from them.
+;; tags - core-functions
+;; restricted - zipmap
 (ns offline-4clojure.p61
   (:use clojure.test))
 

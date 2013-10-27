@@ -1,7 +1,7 @@
-; Intervals - Medium
-; Write a function that takes a sequence of integers and returns a sequence of "intervals".  Each interval is a a vector of two integers, start and end, such that all integers between start and end (inclusive) are contained in the input sequence.
-; tags - 
-; restricted - 
+;; Intervals - Medium
+;; Write a function that takes a sequence of integers and returns a sequence of "intervals".  Each interval is a a vector of two integers, start and end, such that all integers between start and end (inclusive) are contained in the input sequence.
+;; tags - 
+;; restricted - 
 (ns offline-4clojure.p171
   (:use clojure.test))
 

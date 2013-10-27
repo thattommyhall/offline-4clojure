@@ -1,7 +1,7 @@
-; Nth Element - Easy
-; Write a function which returns the Nth element from a sequence.
-; tags - seqs:core-functions
-; restricted - nth
+;; Nth Element - Easy
+;; Write a function which returns the Nth element from a sequence.
+;; tags - seqs:core-functions
+;; restricted - nth
 (ns offline-4clojure.p21
   (:use clojure.test))
 

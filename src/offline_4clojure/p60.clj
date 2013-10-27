@@ -1,7 +1,7 @@
-; Sequence Reductions - Medium
-; Write a function which behaves like reduce, but returns each intermediate value of the reduction.  Your function must accept either two or three arguments, and the return sequence must be lazy.
-; tags - seqs:core-functions
-; restricted - reductions
+;; Sequence Reductions - Medium
+;; Write a function which behaves like reduce, but returns each intermediate value of the reduction.  Your function must accept either two or three arguments, and the return sequence must be lazy.
+;; tags - seqs:core-functions
+;; restricted - reductions
 (ns offline-4clojure.p60
   (:use clojure.test))
 

@@ -1,7 +1,7 @@
-; A nil key - Elementary
-; Write a function which, given a key and map, returns true <a href="http://en.wikipedia.org/wiki/If_and_only_if">iff</a> the map contains an entry with that key and its value is nil.
-; tags - maps
-; restricted - 
+;; A nil key - Elementary
+;; Write a function which, given a key and map, returns true <a href="http://en.wikipedia.org/wiki/If_and_only_if">iff</a> the map contains an entry with that key and its value is nil.
+;; tags - maps
+;; restricted - 
 (ns offline-4clojure.p134
   (:use clojure.test))
 

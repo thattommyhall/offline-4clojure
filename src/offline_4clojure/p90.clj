@@ -1,7 +1,7 @@
-; Cartesian Product - Easy
-; Write a function which calculates the <a href="http://en.wikipedia.org/wiki/Cartesian_product"> Cartesian product</a> of two sets.
-; tags - set-theory
-; restricted - 
+;; Cartesian Product - Easy
+;; Write a function which calculates the <a href="http://en.wikipedia.org/wiki/Cartesian_product"> Cartesian product</a> of two sets.
+;; tags - set-theory
+;; restricted - 
 (ns offline-4clojure.p90
   (:use clojure.test))
 

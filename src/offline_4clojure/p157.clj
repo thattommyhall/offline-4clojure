@@ -1,7 +1,7 @@
-; Indexing Sequences - Easy
-; Transform a sequence into a sequence of pairs containing the original elements along with their index.
-; tags - seqs
-; restricted - 
+;; Indexing Sequences - Easy
+;; Transform a sequence into a sequence of pairs containing the original elements along with their index.
+;; tags - seqs
+;; restricted - 
 (ns offline-4clojure.p157
   (:use clojure.test))
 

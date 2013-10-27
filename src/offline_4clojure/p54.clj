@@ -1,7 +1,7 @@
-; Partition a Sequence - Medium
-; Write a function which returns a sequence of lists of x items each.  Lists of less than x items should not be returned.
-; tags - seqs:core-functions
-; restricted - partition:partition-all
+;; Partition a Sequence - Medium
+;; Write a function which returns a sequence of lists of x items each.  Lists of less than x items should not be returned.
+;; tags - seqs:core-functions
+;; restricted - partition:partition-all
 (ns offline-4clojure.p54
   (:use clojure.test))
 

@@ -1,7 +1,7 @@
-; Compress a Sequence - Easy
-; Write a function which removes consecutive duplicates from a sequence.
-; tags - seqs
-; restricted - 
+;; Compress a Sequence - Easy
+;; Write a function which removes consecutive duplicates from a sequence.
+;; tags - seqs
+;; restricted - 
 (ns offline-4clojure.p30
   (:use clojure.test))
 

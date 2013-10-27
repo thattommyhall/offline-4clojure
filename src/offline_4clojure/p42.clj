@@ -1,7 +1,7 @@
-; Factorial Fun - Easy
-; Write a function which calculates factorials.
-; tags - math
-; restricted - 
+;; Factorial Fun - Easy
+;; Write a function which calculates factorials.
+;; tags - math
+;; restricted - 
 (ns offline-4clojure.p42
   (:use clojure.test))
 

@@ -1,7 +1,7 @@
-; Subset and Superset - Elementary
-; Set A is a subset of set B, or equivalently B is a superset of A, if A is "contained" inside B. A and B may coincide.
-; tags - set-theory
-; restricted - 
+;; Subset and Superset - Elementary
+;; Set A is a subset of set B, or equivalently B is a superset of A, if A is "contained" inside B. A and B may coincide.
+;; tags - set-theory
+;; restricted - 
 (ns offline-4clojure.p161
   (:use clojure.test))
 

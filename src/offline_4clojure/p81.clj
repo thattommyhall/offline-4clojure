@@ -1,7 +1,7 @@
-; Set Intersection - Easy
-; Write a function which returns the intersection of two sets.  The intersection is the sub-set of items that each set has in common.
-; tags - set-theory
-; restricted - intersection
+;; Set Intersection - Easy
+;; Write a function which returns the intersection of two sets.  The intersection is the sub-set of items that each set has in common.
+;; tags - set-theory
+;; restricted - intersection
 (ns offline-4clojure.p81
   (:use clojure.test))
 

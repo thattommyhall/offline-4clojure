@@ -1,7 +1,7 @@
-; Hello World - Elementary
-; Write a function which returns a personalized greeting.
-; tags - 
-; restricted - 
+;; Hello World - Elementary
+;; Write a function which returns a personalized greeting.
+;; tags - 
+;; restricted - 
 (ns offline-4clojure.p16
   (:use clojure.test))
 

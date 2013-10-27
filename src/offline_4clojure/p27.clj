@@ -1,8 +1,8 @@
-; Palindrome Detector - Easy
-; Write a function which returns true if the given sequence is a palindrome.<br/><br>
-;                Hint: "racecar" does not equal '(\r \a \c \e \c \a \r)
-; tags - seqs
-; restricted - 
+;; Palindrome Detector - Easy
+;; Write a function which returns true if the given sequence is a palindrome.<br/><br>
+;;                Hint: "racecar" does not equal '(\r \a \c \e \c \a \r)
+;; tags - seqs
+;; restricted - 
 (ns offline-4clojure.p27
   (:use clojure.test))
 

@@ -1,7 +1,7 @@
-; Map Defaults - Elementary
-; When retrieving values from a map, you can specify default values in case the key is not found:<br/><br/>(= 2 (:foo {:bar 0, :baz 1} 2))<br/><br/>However, what if you want the map itself to contain the default values?  Write a function which takes a default value and a sequence of keys and constructs a map.
-; tags - seqs
-; restricted - 
+;; Map Defaults - Elementary
+;; When retrieving values from a map, you can specify default values in case the key is not found:<br/><br/>(= 2 (:foo {:bar 0, :baz 1} 2))<br/><br/>However, what if you want the map itself to contain the default values?  Write a function which takes a default value and a sequence of keys and constructs a map.
+;; tags - seqs
+;; restricted - 
 (ns offline-4clojure.p156
   (:use clojure.test))
 

@@ -1,7 +1,7 @@
-; Drop Every Nth Item - Easy
-; Write a function which drops every Nth item from a sequence.
-; tags - seqs
-; restricted - 
+;; Drop Every Nth Item - Easy
+;; Write a function which drops every Nth item from a sequence.
+;; tags - seqs
+;; restricted - 
 (ns offline-4clojure.p41
   (:use clojure.test))
 

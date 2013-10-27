@@ -1,7 +1,7 @@
-; Transitive Closure - Hard
-; Write a function which generates the <a href="http://en.wikipedia.org/wiki/Transitive_closure">transitive closure</a> of a <a href="http://en.wikipedia.org/wiki/Binary_relation">binary relation</a>.  The relation will be represented as a set of 2 item vectors.
-; tags - set-theory
-; restricted - 
+;; Transitive Closure - Hard
+;; Write a function which generates the <a href="http://en.wikipedia.org/wiki/Transitive_closure">transitive closure</a> of a <a href="http://en.wikipedia.org/wiki/Binary_relation">binary relation</a>.  The relation will be represented as a set of 2 item vectors.
+;; tags - set-theory
+;; restricted - 
 (ns offline-4clojure.p84
   (:use clojure.test))
 

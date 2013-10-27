@@ -1,7 +1,7 @@
-; Filter Perfect Squares - Medium
-; Given a string of comma separated integers, write a function which returns a new comma separated string that only contains the numbers which are perfect squares.
-; tags - 
-; restricted - 
+;; Filter Perfect Squares - Medium
+;; Given a string of comma separated integers, write a function which returns a new comma separated string that only contains the numbers which are perfect squares.
+;; tags - 
+;; restricted - 
 (ns offline-4clojure.p74
   (:use clojure.test))
 

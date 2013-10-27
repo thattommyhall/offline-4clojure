@@ -1,7 +1,7 @@
-; Insert between two items - Medium
-; Write a function that takes a two-argument predicate, a value, and a collection; and returns a new collection where the <code>value</code> is inserted between every two items that satisfy the predicate.
-; tags - seqs:core-functions
-; restricted - 
+;; Insert between two items - Medium
+;; Write a function that takes a two-argument predicate, a value, and a collection; and returns a new collection where the <code>value</code> is inserted between every two items that satisfy the predicate.
+;; tags - seqs:core-functions
+;; restricted - 
 (ns offline-4clojure.p132
   (:use clojure.test))
 

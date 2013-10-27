@@ -1,7 +1,7 @@
-; Reverse Interleave - Medium
-; Write a function which reverses the interleave process into x number of subsequences.
-; tags - seqs
-; restricted - 
+;; Reverse Interleave - Medium
+;; Write a function which reverses the interleave process into x number of subsequences.
+;; tags - seqs
+;; restricted - 
 (ns offline-4clojure.p43
   (:use clojure.test))
 

@@ -1,9 +1,9 @@
-; The Big Divide - Medium
-; <p>Write a function which calculates the sum of all natural numbers under <i>n</i> (first argument) which are evenly divisible by at least one of <i>a</i> and <i>b</i> (second and third argument). Numbers <i>a</i> and <i>b</i> are guaranteed to be <a href="http://en.wikipedia.org/wiki/Coprime">coprimes</a>.</p>
-;
-;<p>Note: Some test cases have a very large <i>n</i>, so the most obvious solution will exceed the time limit.</p>
-; tags - math
-; restricted - 
+;; The Big Divide - Medium
+;; <p>Write a function which calculates the sum of all natural numbers under <i>n</i> (first argument) which are evenly divisible by at least one of <i>a</i> and <i>b</i> (second and third argument). Numbers <i>a</i> and <i>b</i> are guaranteed to be <a href="http://en.wikipedia.org/wiki/Coprime">coprimes</a>.</p>
+;;
+;;<p>Note: Some test cases have a very large <i>n</i>, so the most obvious solution will exceed the time limit.</p>
+;; tags - math
+;; restricted - 
 (ns offline-4clojure.p148
   (:use clojure.test))
 

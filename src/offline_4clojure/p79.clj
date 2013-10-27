@@ -1,7 +1,7 @@
-; Triangle Minimal Path - Hard
-; Write a function which calculates the sum of the minimal path through a triangle.  The triangle is represented as a collection of vectors.  The path should start at the top of the triangle and move to an adjacent number on the next row until the bottom of the triangle is reached.
-; tags - graph-theory
-; restricted - 
+;; Triangle Minimal Path - Hard
+;; Write a function which calculates the sum of the minimal path through a triangle.  The triangle is represented as a collection of vectors.  The path should start at the top of the triangle and move to an adjacent number on the next row until the bottom of the triangle is reached.
+;; tags - graph-theory
+;; restricted - 
 (ns offline-4clojure.p79
   (:use clojure.test))
 

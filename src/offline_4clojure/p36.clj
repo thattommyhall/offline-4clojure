@@ -1,7 +1,7 @@
-; Let it Be - Elementary
-; Can you bind x, y, and z so that these are all true?
-; tags - math:syntax
-; restricted - 
+;; Let it Be - Elementary
+;; Can you bind x, y, and z so that these are all true?
+;; tags - math:syntax
+;; restricted - 
 (ns offline-4clojure.p36
   (:use clojure.test))
 

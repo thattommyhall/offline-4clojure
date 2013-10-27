@@ -1,7 +1,7 @@
-; Intro to Sets - Elementary
-; Sets are collections of unique values.
-; tags - 
-; restricted - 
+;; Intro to Sets - Elementary
+;; Sets are collections of unique values.
+;; tags - 
+;; restricted - 
 (ns offline-4clojure.p8
   (:use clojure.test))
 

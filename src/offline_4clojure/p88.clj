@@ -1,7 +1,7 @@
-; Symmetric Difference - Easy
-; Write a function which returns the symmetric difference of two sets.  The symmetric difference is the set of items belonging to one but not both of the two sets.
-; tags - set-theory
-; restricted - 
+;; Symmetric Difference - Easy
+;; Write a function which returns the symmetric difference of two sets.  The symmetric difference is the set of items belonging to one but not both of the two sets.
+;; tags - set-theory
+;; restricted - 
 (ns offline-4clojure.p88
   (:use clojure.test))
 

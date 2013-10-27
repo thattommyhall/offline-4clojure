@@ -1,7 +1,7 @@
-; Partially Flatten a Sequence - Medium
-; Write a function which flattens any nested combination of sequential things (lists, vectors, etc.), but maintains the lowest level sequential items.  The result should be a sequence of sequences with only one level of nesting.
-; tags - seqs
-; restricted - 
+;; Partially Flatten a Sequence - Medium
+;; Write a function which flattens any nested combination of sequential things (lists, vectors, etc.), but maintains the lowest level sequential items.  The result should be a sequence of sequences with only one level of nesting.
+;; tags - seqs
+;; restricted - 
 (ns offline-4clojure.p93
   (:use clojure.test))
 

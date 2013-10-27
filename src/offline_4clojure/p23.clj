@@ -1,7 +1,7 @@
-; Reverse a Sequence - Easy
-; Write a function which reverses a sequence.
-; tags - seqs:core-functions
-; restricted - reverse:rseq
+;; Reverse a Sequence - Easy
+;; Write a function which reverses a sequence.
+;; tags - seqs:core-functions
+;; restricted - reverse:rseq
 (ns offline-4clojure.p23
   (:use clojure.test))
 

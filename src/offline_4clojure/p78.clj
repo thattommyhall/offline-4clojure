@@ -1,7 +1,7 @@
-; Reimplement Trampoline - Medium
-; Reimplement the function described in <a href="76"> "Intro to Trampoline"</a>.
-; tags - core-functions
-; restricted - trampoline
+;; Reimplement Trampoline - Medium
+;; Reimplement the function described in <a href="76"> "Intro to Trampoline"</a>.
+;; tags - core-functions
+;; restricted - trampoline
 (ns offline-4clojure.p78
   (:use clojure.test))
 

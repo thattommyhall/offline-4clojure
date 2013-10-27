@@ -1,7 +1,7 @@
-; Local bindings - Elementary
-; Clojure lets you give local names to values using the special let-form.
-; tags - syntax
-; restricted - 
+;; Local bindings - Elementary
+;; Clojure lets you give local names to values using the special let-form.
+;; tags - syntax
+;; restricted - 
 (ns offline-4clojure.p35
   (:use clojure.test))
 

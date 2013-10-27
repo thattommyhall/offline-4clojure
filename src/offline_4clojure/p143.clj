@@ -1,7 +1,7 @@
-; dot product - Easy
-; Create a function that computes the <a href="http://en.wikipedia.org/wiki/Dot_product#Definition">dot product</a> of two sequences. You may assume that the vectors will have the same length.
-; tags - seqs:math
-; restricted - 
+;; dot product - Easy
+;; Create a function that computes the <a href="http://en.wikipedia.org/wiki/Dot_product#Definition">dot product</a> of two sequences. You may assume that the vectors will have the same length.
+;; tags - seqs:math
+;; restricted - 
 (ns offline-4clojure.p143
   (:use clojure.test))
 

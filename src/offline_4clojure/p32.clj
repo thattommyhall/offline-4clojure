@@ -1,7 +1,7 @@
-; Duplicate a Sequence - Easy
-; Write a function which duplicates each element of a sequence.
-; tags - seqs
-; restricted - 
+;; Duplicate a Sequence - Easy
+;; Write a function which duplicates each element of a sequence.
+;; tags - seqs
+;; restricted - 
 (ns offline-4clojure.p32
   (:use clojure.test))
 

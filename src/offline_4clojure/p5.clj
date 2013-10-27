@@ -1,7 +1,7 @@
-; Lists: conj - Elementary
-; When operating on a list, the conj function will return a new list with one or more items "added" to the front.
-; tags - 
-; restricted - 
+;; Lists: conj - Elementary
+;; When operating on a list, the conj function will return a new list with one or more items "added" to the front.
+;; tags - 
+;; restricted - 
 (ns offline-4clojure.p5
   (:use clojure.test))
 
