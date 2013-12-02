@@ -20,7 +20,7 @@
     (strip-cr (string/join "\n" tests))))
 
 (defn wrap-in-are [tests]
-  (str "(defn -main []\n  (are [x] x\n"
+  (str "(defn -main []\n  (are [soln] soln\n"
        tests
        "\n))\n"))
 
