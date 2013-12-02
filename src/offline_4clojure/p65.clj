@@ -10,7 +10,7 @@
 )
 
 (defn -main []
-  (are [x] x
+  (are [soln] soln
 (= :map (__ {:a 1, :b 2}))
 (= :list (__ (range (rand-int 20))))
 (= :vector (__ [1 2 3 4 5 6]))

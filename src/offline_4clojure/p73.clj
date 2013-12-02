@@ -10,7 +10,7 @@
 )
 
 (defn -main []
-  (are [x] x
+  (are [soln] soln
 (= nil (__ [[:e :e :e]
             [:e :e :e]
             [:e :e :e]]))

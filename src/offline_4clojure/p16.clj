@@ -10,7 +10,7 @@
 )
 
 (defn -main []
-  (are [x] x
+  (are [soln] soln
 (= (__ "Dave") "Hello, Dave!")
 (= (__ "Jenn") "Hello, Jenn!")
 (= (__ "Rhea") "Hello, Rhea!")

@@ -10,6 +10,6 @@
 )
 
 (defn -main []
-  (are [x] x
+  (are [soln] soln
 (= __ (map #(+ % 5) '(1 2 3)))
 ))

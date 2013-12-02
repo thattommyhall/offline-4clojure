@@ -10,7 +10,7 @@
 )
 
 (defn -main []
-  (are [x] x
+  (are [soln] soln
 (= (__ 1) 1)
 (= (__ 10) (count '(1 3 7 9)) 4)
 (= (__ 40) 16)

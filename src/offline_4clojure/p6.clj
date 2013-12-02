@@ -10,6 +10,6 @@
 )
 
 (defn -main []
-  (are [x] x
+  (are [soln] soln
 (= [__] (list :a :b :c) (vec '(:a :b :c)) (vector :a :b :c))
 ))

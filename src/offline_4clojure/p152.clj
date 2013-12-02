@@ -77,7 +77,7 @@
 )
 
 (defn -main []
-  (are [x] x
+  (are [soln] soln
 (= (__ '[[A B C D]
          [A C D B]
          [B A D C]

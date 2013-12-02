@@ -10,6 +10,6 @@
 )
 
 (defn -main []
-  (are [x] x
+  (are [soln] soln
 (= __ (rest [10 20 30 40]))
 ))

@@ -10,7 +10,7 @@
 )
 
 (defn -main []
-  (are [x] x
+  (are [soln] soln
 (= "I" (__ 1))
 (= "XXX" (__ 30))
 (= "IV" (__ 4))

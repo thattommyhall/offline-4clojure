@@ -11,7 +11,7 @@
 )
 
 (defn -main []
-  (are [x] x
+  (are [soln] soln
 (= true (__ #{[:a :a]}))
 (= true (__ #{[:a :b]}))
 (= false (__ #{[1 2] [2 3] [3 1]

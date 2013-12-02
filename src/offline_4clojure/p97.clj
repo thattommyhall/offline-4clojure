@@ -13,7 +13,7 @@
 )
 
 (defn -main []
-  (are [x] x
+  (are [soln] soln
 (= (__ 1) [1])
 (= (map __ (range 1 6))
    [     [1]

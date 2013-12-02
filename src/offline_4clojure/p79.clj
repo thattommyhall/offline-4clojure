@@ -10,7 +10,7 @@
 )
 
 (defn -main []
-  (are [x] x
+  (are [soln] soln
 (= 7 (__ '([1]
           [2 4]
          [5 1 4]

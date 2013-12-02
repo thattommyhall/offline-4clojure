@@ -14,6 +14,6 @@
 )
 
 (defn -main []
-  (are [x] x
+  (are [soln] soln
 (= (str '__) (__))
 ))

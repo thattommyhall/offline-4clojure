@@ -12,7 +12,7 @@
 )
 
 (defn -main []
-  (are [x] x
+  (are [soln] soln
 (= 10 ((__ (fn [a]
              (fn [b]
                (fn [c]

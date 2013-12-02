@@ -12,7 +12,7 @@
 )
 
 (defn -main []
-  (are [x] x
+  (are [soln] soln
 (= 14 (__ "XIV"))
 (= 827 (__ "DCCCXXVII"))
 (= 3999 (__ "MMMCMXCIX"))

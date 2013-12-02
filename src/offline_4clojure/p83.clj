@@ -10,7 +10,7 @@
 )
 
 (defn -main []
-  (are [x] x
+  (are [soln] soln
 (= false (__ false false))
 (= true (__ true false))
 (= false (__ true))

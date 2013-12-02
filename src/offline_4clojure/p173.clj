@@ -12,7 +12,7 @@
 )
 
 (defn -main []
-  (are [x] x
+  (are [soln] soln
 (= 3
   (let [[__] [+ (range 3)]] (apply __))
   (let [[[__] b] [[+ 1] 2]] (__ b))

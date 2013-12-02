@@ -22,7 +22,7 @@
 )
 
 (defn -main []
-  (are [x] x
+  (are [soln] soln
 (= :high-card (__ ["HA" "D2" "H3" "C9" "DJ"]))
 (= :pair (__ ["HA" "HQ" "SJ" "DA" "HT"]))
 (= :two-pair (__ ["HA" "DA" "HQ" "SQ" "HT"]))

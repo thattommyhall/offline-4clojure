@@ -10,6 +10,6 @@
 )
 
 (defn -main []
-  (are [x] x
+  (are [soln] soln
 (= __ true)
 ))

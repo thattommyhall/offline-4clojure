@@ -16,7 +16,7 @@
 )
 
 (defn -main []
-  (are [x] x
+  (are [soln] soln
 (= 2 ((__ '(/ a b))
       '{b 8 a 16}))
 (= 8 ((__ '(+ a b 2))

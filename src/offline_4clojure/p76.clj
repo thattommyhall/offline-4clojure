@@ -10,7 +10,7 @@
 )
 
 (defn -main []
-  (are [x] x
+  (are [soln] soln
 (= __
    (letfn
      [(foo [x y] #(bar (conj x y) y))

@@ -10,7 +10,7 @@
 )
 
 (defn -main []
-  (are [x] x
+  (are [soln] soln
 (__ "This string has no brackets.")
 (__ "class Test {
       public static void main(String[] args) {

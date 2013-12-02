@@ -10,7 +10,7 @@
 )
 
 (defn -main []
-  (are [x] x
+  (are [soln] soln
 (= (__ "kitten" "sitting") 3)
 (= (__ "closure" "clojure") (__ "clojure" "closure") 1)
 (= (__ "xyx" "xyyyx") 2)

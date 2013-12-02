@@ -11,7 +11,7 @@
 )
 
 (defn -main []
-  (are [x] x
+  (are [soln] soln
 (false? (__ '(1 2 3 4 5)))
 (true? (__ "racecar"))
 (true? (__ [:foo :bar :foo]))

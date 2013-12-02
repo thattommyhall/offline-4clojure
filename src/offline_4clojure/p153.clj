@@ -20,7 +20,7 @@
 )
 
 (defn -main []
-  (are [x] x
+  (are [soln] soln
 (= (__ #{#{\U} #{\s} #{\e \R \E} #{\P \L} #{\.}})
    true)
 (= (__ #{#{:a :b :c :d :e}

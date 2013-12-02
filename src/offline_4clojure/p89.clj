@@ -10,7 +10,7 @@
 )
 
 (defn -main []
-  (are [x] x
+  (are [soln] soln
 (= true (__ [[:a :b]]))
 (= false (__ [[:a :a] [:b :b]]))
 (= false (__ [[:a :b] [:a :b] [:a :c] [:c :a]

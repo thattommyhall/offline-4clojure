@@ -10,7 +10,7 @@
 )
 
 (defn -main []
-  (are [x] x
+  (are [soln] soln
 (= true  (__ #{-1 1 99} 
              #{-2 2 888}
              #{-3 3 7777})) ; ex. all sets have a subset which sums to zero

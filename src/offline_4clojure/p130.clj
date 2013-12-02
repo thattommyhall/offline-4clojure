@@ -32,7 +32,7 @@
 )
 
 (defn -main []
-  (are [x] x
+  (are [soln] soln
 (= '(n)
    (__ 'n '(n)))
 (= '(a (t (e)))

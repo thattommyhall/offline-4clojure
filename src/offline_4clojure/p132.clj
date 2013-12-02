@@ -10,7 +10,7 @@
 )
 
 (defn -main []
-  (are [x] x
+  (are [soln] soln
 (= '(1 :less 6 :less 7 4 3) (__ < :less [1 6 7 4 3]))
 (= '(2) (__ > :more [2]))
 (= [0 1 :x 2 :x 3 :x 4]  (__ #(and (pos? %) (< % %2)) :x (range 5)))

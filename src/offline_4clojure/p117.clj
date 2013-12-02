@@ -17,7 +17,7 @@
 )
 
 (defn -main []
-  (are [x] x
+  (are [soln] soln
 (= true  (__ ["M   C"]))
 (= false (__ ["M # C"]))
 (= true  (__ ["#######"

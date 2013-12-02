@@ -10,7 +10,7 @@
 )
 
 (defn -main []
-  (are [x] x
+  (are [soln] soln
 (= __ (conj [1 2 3] 4))
 (= __ (conj [1 2] 3 4))
 ))

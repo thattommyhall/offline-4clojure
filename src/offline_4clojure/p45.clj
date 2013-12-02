@@ -10,6 +10,6 @@
 )
 
 (defn -main []
-  (are [x] x
+  (are [soln] soln
 (= __ (take 5 (iterate #(+ 3 %) 1)))
 ))

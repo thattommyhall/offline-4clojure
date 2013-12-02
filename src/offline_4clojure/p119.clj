@@ -12,7 +12,7 @@
 )
 
 (defn -main []
-  (are [x] x
+  (are [soln] soln
 (= (__ :x [[:o :e :e] 
            [:o :x :o] 
            [:x :x :e]])

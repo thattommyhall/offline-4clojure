@@ -14,7 +14,7 @@
 )
 
 (defn -main []
-  (are [x] x
+  (are [soln] soln
 (= {:suit :diamond :rank 10} (__ "DQ"))
 (= {:suit :heart :rank 3} (__ "H5"))
 (= {:suit :club :rank 12} (__ "CA"))

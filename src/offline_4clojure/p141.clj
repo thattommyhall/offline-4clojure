@@ -32,7 +32,7 @@
 )
 
 (defn -main []
-  (are [x] x
+  (are [soln] soln
 (let [notrump (__ nil)]
   (and (= {:suit :club :rank 9}  (notrump [{:suit :club :rank 4}
                                            {:suit :club :rank 9}]))

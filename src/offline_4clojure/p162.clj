@@ -10,7 +10,7 @@
 )
 
 (defn -main []
-  (are [x] x
+  (are [soln] soln
 (= __ (if-not false 1 0))
 (= __ (if-not nil 1 0))
 (= __ (if true 1 0))

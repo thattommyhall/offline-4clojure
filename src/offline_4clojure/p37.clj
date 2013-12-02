@@ -10,6 +10,6 @@
 )
 
 (defn -main []
-  (are [x] x
+  (are [soln] soln
 (= __ (apply str (re-seq #"[A-Z]+" "bA1B3Ce ")))
 ))

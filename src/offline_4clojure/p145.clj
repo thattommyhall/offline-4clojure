@@ -10,7 +10,7 @@
 )
 
 (defn -main []
-  (are [x] x
+  (are [soln] soln
 (= __ (for [x (range 40)
             :when (= 1 (rem x 4))]
         x))
